@@ -1,0 +1,227 @@
+/* Clean Screen Manager */
+.screen-manager-container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.screen-manager-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.modern-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modern-btn:hover {
+  background: #2563eb;
+}
+
+.import-btn {
+  background: #10b981;
+}
+
+.import-btn:hover {
+  background: #059669;
+}
+
+.add-btn {
+  background: #f59e0b;
+}
+
+.add-btn:hover {
+  background: #d97706;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Import Section */
+.import-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.no-screens-message {
+  text-align: center;
+  padding: 80px 40px;
+  color: #64748b;
+}
+
+.no-screens-message h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.no-screens-message p {
+  font-size: 1rem;
+}
+
+.screens-section {
+  margin-bottom: 20px;
+}
+
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.screen-wrapper {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.screen-wrapper:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .screens-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .screens-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.keyboard-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .screen-manager-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .screen-manager-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .header-controls {
+    justify-content: center;
+  }
+
+  .modern-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .screens-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .no-screens-message {
+    padding: 40px 20px;
+  }
+
+  .no-screens-message h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.5rem;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modern-btn {
+    width: 100%;
+  }
+}
+
+/* Loading States */
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Success/Error Messages */
+.message {
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.message.success {
+  background: linear-gradient(145deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.message.error {
+  background: linear-gradient(145deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}

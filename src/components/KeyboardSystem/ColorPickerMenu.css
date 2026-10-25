@@ -1,0 +1,101 @@
+/* Color Picker Menu */
+#color-picker-menu {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  min-width: 280px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  position: absolute;
+  z-index: 1000;
+  margin-top: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-title {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.color-section-title {
+  margin: 15px 0 10px 0;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.color-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.color-table td {
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.color-table td:hover {
+  border: 2px solid #1e293b;
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.color-table td:active {
+  transform: scale(1.05);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.standard-colors-table td {
+  width: 32px;
+  height: 32px;
+}
+
+/* Add checkmark for selected color */
+.color-table td.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}

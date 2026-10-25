@@ -1,0 +1,45 @@
+/* Screen Actions Buttons */
+.screen-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.action-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.action-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.action-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.save-btn.active {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.search-btn.active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.update-btn.active {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
